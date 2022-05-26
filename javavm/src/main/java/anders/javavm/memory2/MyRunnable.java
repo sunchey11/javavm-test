@@ -31,5 +31,8 @@ public class MyRunnable implements Runnable {
 		if (this.users.size() % 1000 == 0) {
 			System.out.println(tname + " add users:" + this.users.size());
 		}
+		if (this.users.size() > 30000) {
+			this.users.clear();
+		}
 	}
 }
