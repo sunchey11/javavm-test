@@ -20,11 +20,11 @@ public class MyRunnable implements Runnable {
 			if (age % 1000 == 0) {
 				System.out.println(tname + ":" + age);
 			}
-			try {
-				this.wait(50);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				this.wait(50);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
 		}
 	}
 
