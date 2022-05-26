@@ -1,5 +1,8 @@
 package anders.javavm.memory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 测试内存cpu
  */
@@ -33,7 +36,9 @@ public class TestMemory {
 		}
 	}
 	private static void doSomeThing(Integer age) {
+		
 		User user = new User("小明" + age, 1);
 		user.info();
+		
 	}
 }
