@@ -12,13 +12,18 @@ public class MyRunnable implements Runnable {
 	}
 
 	@Override
-	public void run() {
+	public synchronized void run() {
 		Integer age = 1;
 		while (true) {
 			doSomeThing(age);
 			age++;
 			if (age % 1000 == 0) {
 				System.out.println(tname + ":" + age);
+			}
+			try {
+				this.wait(50);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
 		}
 	}
